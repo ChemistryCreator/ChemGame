@@ -13,6 +13,6 @@ public class Thermometer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		tm.text = temp+"";		
+		tm.text = string.Format ("{0:0}", temp);
 	}
 }
