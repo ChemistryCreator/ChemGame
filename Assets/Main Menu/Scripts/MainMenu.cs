@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		ChemGame.loadAssets ();
 	}
 	
 	// Update is called once per frame
