@@ -2,7 +2,6 @@
 using System.IO;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 public sealed class ChemGame {
 	//Singleton stuff
@@ -11,6 +10,7 @@ public sealed class ChemGame {
 
 	//Game stuff
 	private static bool isLoaded = false;
+	private static List<MysteryCompound> compounds;
 
 	private ChemGame() { 
 		if (!isLoaded) {
@@ -31,9 +31,10 @@ public sealed class ChemGame {
 		}
 	}
 
-	public static List<MysteryCompound> Compounds {
-		get;
-		set;
+	public List<MysteryCompound> Compounds {
+		get {
+			return ChemGame.compounds;
+		}
 	}
 
 	public static void loadAssets() {
@@ -45,7 +46,7 @@ public sealed class ChemGame {
 		while (!reader.EndOfStream) {
 			currentLine = reader.ReadLine();
 			MysteryCompound compound = MysteryCompound.parse(currentLine); //TODO: implement parse
-			ChemGame.Compounds.Add(compound);
+			ChemGame.compounds.Add(compound);
 		}
 		reader.Close ();
 		ChemGame.isLoaded = true;
