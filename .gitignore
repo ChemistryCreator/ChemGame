@@ -1,14 +1,18 @@
-# Unity .gitignore file.
-.DS_Store
-Library
-Library/*
-*.csproj
+#################
+## Unity
+#################
 *.sln
 *.userprefs
-Temp
+*.csproj
 *.pidb
-Build
-
+*.unityproj
+.DS_Store
+/Library/FailedAssetImports.txt
+/Library/cache/
+/Library/previews/
+/Library/ScriptAssemblies
+/obj
+/Temp
 
 #################
 ## Eclipse

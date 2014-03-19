@@ -88,6 +88,7 @@ GameObject:
   - 114: {fileID: 37660049}
   - 114: {fileID: 37660054}
   - 114: {fileID: 37660055}
+  - 114: {fileID: 37660056}
   m_Layer: 0
   m_Name: SuperOven
   m_TagString: Untagged
@@ -182,6 +183,20 @@ MonoBehaviour:
   player: {fileID: 0}
   test: 0
   thermometer: {fileID: 0}
+--- !u!114 &37660056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 37660048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6052592acf4ab75438631dea9205bdfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  test: 0
+  thermometer: {fileID: 0}
 --- !u!1 &156493585
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,6 +211,7 @@ GameObject:
   - 114: {fileID: 156493586}
   - 114: {fileID: 156493591}
   - 114: {fileID: 156493592}
+  - 114: {fileID: 156493593}
   m_Layer: 0
   m_Name: SuperCooler
   m_TagString: Untagged
@@ -290,6 +306,20 @@ MonoBehaviour:
   player: {fileID: 0}
   test: 0
   thermometer: {fileID: 0}
+--- !u!114 &156493593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 156493585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8390ff1da3b54498feec7676044075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  test: 0
+  thermometer: {fileID: 0}
 --- !u!1 &408094384
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,6 +333,7 @@ GameObject:
   - 114: {fileID: 408094385}
   - 114: {fileID: 408094389}
   - 114: {fileID: 408094390}
+  - 114: {fileID: 408094391}
   m_Layer: 0
   m_Name: Thermometer
   m_TagString: Untagged
@@ -396,6 +427,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba16f0596ad84871bdea066d406c0a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &408094391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 408094384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb9c3618a2828dd4bad9dd8ec10841c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &960635390
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,6 +453,7 @@ GameObject:
   - 54: {fileID: 960635396}
   - 114: {fileID: 960635397}
   - 114: {fileID: 960635398}
+  - 114: {fileID: 960635399}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -518,6 +561,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followMouse: 1
+--- !u!114 &960635399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 960635390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c734fd624d64630479a90768037b983a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followMouse: 1
 --- !u!1 &1182823498
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,6 +649,7 @@ GameObject:
   - 81: {fileID: 1862282716}
   - 114: {fileID: 1862282721}
   - 114: {fileID: 1862282722}
+  - 114: {fileID: 1862282723}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -682,5 +738,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 726e61f91074a4f47b91142a216390c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1862282723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1862282715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07ec078b457b37942849d1e3044576f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
