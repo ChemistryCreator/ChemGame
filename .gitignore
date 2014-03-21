@@ -229,3 +229,6 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+Assets/Standard Assets/Particles/Legacy Particles/TimedObjectDestructor.js
+Assets/Standard Assets/Particles/Sources/Shaders/Particle Alpha Blend (Queue +100).shader
+ProjectSettings/Physics2DSettings.asset
