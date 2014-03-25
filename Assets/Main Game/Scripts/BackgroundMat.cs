@@ -5,9 +5,11 @@ public class BackgroundMat : MonoBehaviour {
 
 	public Material HotMat;
 	public Material CoolMat;
+	public Material NormalMat;
 
 	// Use this for initialization
 	void Start () {
+		renderer.material = NormalMat;
 
 	}
 	
@@ -21,9 +23,10 @@ public class BackgroundMat : MonoBehaviour {
 	{
 		if (matKind == "Cold") {
 			renderer.material = CoolMat;
-		}
-		else {
+		} else if (matKind == "Hot") {
 			renderer.material = HotMat;
+		} else {
+			renderer.material = NormalMat;
 		}
 	}
 }

@@ -37,6 +37,15 @@ public class SuperOven : MonoBehaviour {
 
 	}
 
+	void OnTriggerExit(Collider other) {
+		
+		if (other.gameObject.tag == "Player") {
+			thermometerBG.SetMat("Normal");	
+		}
+		
+	}
+
+
 //	void OnCollisionEnter(Collision other) {
 //		
 //		if (other.gameObject.tag == "Player") {

@@ -39,7 +39,14 @@ public class SuperCooler : MonoBehaviour {
 		}
 
 	}
-	
+
+	void OnTriggerExit(Collider other) {
+		
+		if (other.gameObject.tag == "Player") {
+			thermometerBG.SetMat("Normal");	
+		}
+		
+	}
 	
 	//	void OnCollisionEnter(Collision other) {
 	//		
