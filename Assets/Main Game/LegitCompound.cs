@@ -55,17 +55,8 @@ public class LegitCompound : ICompound {
 		//TODO: add logic here
 		return CompoundState.Liquid;
 	}
-
+	
 	public bool Equals(ICompound compound) {
-		//TODO: correct this
-		/*
-		if (compound == null) {
-			return false;
-		}
-		return this.Name == compound.Name
-			&& this.BoilingPoint == compound.BoilingPoint
-			&& this.FreezingPoint == compound.FreezingPoint;
-		*/
-		return false;
+		return this.Name.Equals(compound.Name);
 	}
 }

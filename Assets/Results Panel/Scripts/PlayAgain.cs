@@ -6,6 +6,7 @@ public class PlayAgain : MonoBehaviour {
 	void OnGUI() {
 		if (GUI.Button (new Rect (150,100,300,75), "Play Again")) {
 			print ("You clicked the button!");
+			ChemGame.Instance.prepareForNewGame();
 			Application.LoadLevel("Main Game");
 		}
 	}

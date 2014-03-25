@@ -17,8 +17,8 @@ public class NonLegitCompound : ICompound {
 		return compound;
 	}
 
+
 	public bool Equals(ICompound compound) {
-		//TODO: implement this
-		return false;
+		return this.Name.Equals(compound.Name);
 	}
 }
