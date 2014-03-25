@@ -8,18 +8,30 @@ public class AnswerOptions : MonoBehaviour {
 
 	public ICompound[] answerOptions = new ICompound[4];
 
+	public Font myFont;
+	public int myFontSize;
+	public Color color;
+
 	void OnGUI() {
-		Screen.showCursor = true;
-		if (GUI.Button (new Rect (0, 0, buttonWidth, buttonHeight), ChemGame.Instance.compoundChoices[0].Name)) {
+		//Screen.showCursor = true;
+
+		GUIStyle myStyle = new GUIStyle();
+		myStyle.font = myFont;
+		myStyle.fontSize = myFontSize;
+		myStyle.normal.textColor = color;
+		myStyle.alignment = TextAnchor.MiddleCenter;
+		myStyle.padding=new RectOffset(0,-5,30,0);
+
+		if (GUI.Button (new Rect (0, 0, buttonWidth, buttonHeight), ChemGame.Instance.compoundChoices[0].Name, myStyle)) {
 			this.LoadResultsScreen(0);
 		}
-		if (GUI.Button (new Rect (buttonWidth, 0, buttonWidth, buttonHeight), ChemGame.Instance.compoundChoices[1].Name)) {
+		if (GUI.Button (new Rect (buttonWidth, 0, buttonWidth, buttonHeight), ChemGame.Instance.compoundChoices[1].Name, myStyle)) {
 			this.LoadResultsScreen(1);
 		}
-		if (GUI.Button (new Rect (buttonWidth * 2, 0, buttonWidth, buttonHeight), ChemGame.Instance.compoundChoices[2].Name)) {
+		if (GUI.Button (new Rect (buttonWidth * 2, 0, buttonWidth, buttonHeight), ChemGame.Instance.compoundChoices[2].Name, myStyle)) {
 			this.LoadResultsScreen(2);
 		}
-		if (GUI.Button (new Rect (buttonWidth * 3, 0, buttonWidth, buttonHeight), ChemGame.Instance.compoundChoices[3].Name)) {
+		if (GUI.Button (new Rect (buttonWidth * 3, 0, buttonWidth, buttonHeight), ChemGame.Instance.compoundChoices[3].Name, myStyle)) {
 			this.LoadResultsScreen(3);
 		}
 	}
