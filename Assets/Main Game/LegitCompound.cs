@@ -51,9 +51,17 @@ public class LegitCompound : ICompound {
 		return compound;
 	}
 
-	public CompoundState GetState(int temperature) {
+	public CompoundState GetState(float temperature) {
 		//TODO: add logic here
-		return CompoundState.Liquid;
+
+
+		if (temperature > this.BoilingPoint) {
+			return CompoundState.Gas;
+		} else if (temperature < this.FreezingPoint) {
+			return CompoundState.Solid;
+		} else {
+			return CompoundState.Liquid;
+		}
 	}
 	
 	public bool Equals(ICompound compound) {

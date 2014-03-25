@@ -6,8 +6,8 @@ public class MouseCursor : MonoBehaviour {
 	public Texture2D originalCursor;
 	
 	
-	public int cursorSizeX = 32;  // set to width of your cursor texture
-	public int cursorSizeY = 32;  // set to height of your cursor texture
+	public float cursorSizeX = 32;  // set to width of your cursor texture
+	public float cursorSizeY = 32;  // set to height of your cursor texture
 	
 	static bool showOriginal = true;
 	

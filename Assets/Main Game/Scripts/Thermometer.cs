@@ -15,4 +15,8 @@ public class Thermometer : MonoBehaviour {
 	void Update () {
 		tm.text = string.Format ("{0:0}", temp);
 	}
+
+	public float GetTemp(){
+		return temp;
+	}
 }
