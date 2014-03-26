@@ -4,7 +4,7 @@ using System.Collections;
 public class AnswerOptions : MonoBehaviour {
 
 	private int buttonHeight = 30;
-	private int buttonWidth = 100;
+	private int buttonWidth = 125;
 
 	public ICompound[] answerOptions = new ICompound[4];
 

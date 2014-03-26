@@ -1,5 +1,7 @@
 Water,0,100
-Legit 1,10,90
-Legit 2,20,80
-Legit 3,30,70
-Legit 4,40,60
+Salt,801,1413
+Methane,-182,-161
+Ammonia,-78,-33
+Acetic Acid,16,118
+Ethanol,-114,78
+Carbon Dioxide,-78,-57

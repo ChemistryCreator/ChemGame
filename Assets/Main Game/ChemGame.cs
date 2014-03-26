@@ -13,6 +13,7 @@ public sealed class ChemGame {
 	//Game stuff
 	private static bool isLoaded = false;
 	private static List<ICompound> compounds;
+	private static List<ICompound> compoundsRemoved;
 	private static int numLegitCompounds = 0;
 
 	public ICompound chosenCompound;
@@ -48,26 +49,36 @@ public sealed class ChemGame {
 	}
 
 	public void prepareForNewGame() {
+		//ChemGame.loadAssets ();
 		this.mysteryCompound = compounds[random.Next (0, ChemGame.numLegitCompounds - 1)];
 		this.compoundChoices [0] = this.mysteryCompound;
 
-		for (int i = 1; i < this.compoundChoices.Length; i++) {
-			int index;
-			bool isTaken = false;
-			//do {
-				index = random.Next (0, ChemGame.compounds.Count);
+		compounds.Remove (mysteryCompound);
+		compoundsRemoved.Add (mysteryCompound);
 
-				for(int j = 0; j < i; j++) {
-					if(this.compoundChoices[j].Equals(ChemGame.compounds[index])) {
-						isTaken = true;
-						break;
-					}
-				}
-			//} while (isTaken);
-			this.compoundChoices[i] = compounds[index];
+		for (int i = 1; i < this.compoundChoices.Length; i++) {
+			this.compoundChoices[i] = compounds[random.Next (0, ChemGame.numLegitCompounds - (i+1))];
+			compounds.Remove(compoundChoices[i]);
+			compoundsRemoved.Add (compoundChoices[i]);
+//			bool isTaken = false;
+//
+//			//do {
+//				index = random.Next (0, ChemGame.compounds.Count);
+//
+//				for(int j = 0; j < i; j++) {
+//					if(this.compoundChoices[j].Equals(ChemGame.compounds[index])) {
+//						isTaken = true;
+//						break;
+//					}
+//				}
+//			//} while (isTaken);
+
+//			this.compoundChoices[i] = compounds[index];
 		}
 
 		this.Shuffle (this.compoundChoices);
+		compounds.AddRange(compoundsRemoved);
+		compoundsRemoved.Clear ();
 	}
 
 	private void Shuffle(ICompound[] compounds) {
@@ -83,8 +94,9 @@ public sealed class ChemGame {
 
 	public static void loadAssets() {
 		ChemGame.compounds = new List<ICompound> ();
+		ChemGame.compoundsRemoved = new List<ICompound> ();
 		ChemGame.loadLegitCompounds();
-		ChemGame.loadNonLegitCompounds();
+		//ChemGame.loadNonLegitCompounds();
 
 		ChemGame.isLoaded = true;
 	}
