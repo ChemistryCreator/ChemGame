@@ -6,6 +6,10 @@ public class SetTextValue : MonoBehaviour {
 	public string typeOfText;
 	public GameObject newSprite;
 
+	void Awake() {
+		Screen.showCursor = true;
+	}
+
 	// Use this for initialization
 	void Start () {
 
