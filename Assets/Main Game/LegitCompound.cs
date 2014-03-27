@@ -20,7 +20,7 @@ public class LegitCompound : ICompound {
 		set;
 	}
 	
-	private LegitCompound(
+	public LegitCompound(
 		string name,
 		int freezingPoint, 
 		int boilingPoint

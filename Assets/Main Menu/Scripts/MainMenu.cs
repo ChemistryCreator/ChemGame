@@ -3,6 +3,10 @@ using System.Collections;
 
 public class MainMenu : MonoBehaviour {
 
+	void Awake () {
+		Screen.SetResolution (600, 400, false);
+	}
+
 	void OnGUI() {
 //		if (GUI.Button (new Rect (150,100,300,75), "Start Game")) {
 //			print ("You clicked the button!");
@@ -12,7 +16,7 @@ public class MainMenu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		ChemGame.loadAssets ();
+		//ChemGame.loadAssets ();
 	}
 	
 	// Update is called once per frame

@@ -103,16 +103,54 @@ public sealed class ChemGame {
 
 	private static void loadLegitCompounds() {
 		String path = "Assets/Main Game/legitcompounds.txt";
-		StreamReader reader = new StreamReader (path);
+//		StreamReader reader = new StreamReader (path);
 
-		String currentLine;
-		while (!reader.EndOfStream) {
-			currentLine = reader.ReadLine ();
-			LegitCompound compound = LegitCompound.parse (currentLine);
-			ChemGame.compounds.Add (compound);
-			ChemGame.numLegitCompounds++;
-		}
-		reader.Close ();
+
+
+		// Hardcoding loading of legit compounds for web version
+		//		Salt,801,1413
+		//		Methane,-182,-161
+		//		Ammonia,-78,-33
+		//		Acetic Acid,16,118
+		//		Ethanol,-114,78
+		//		Carbon Dioxide,-78,-57
+		LegitCompound compound = new LegitCompound ("Water",0,100);
+		ChemGame.compounds.Add (compound);
+		ChemGame.numLegitCompounds++;
+
+		compound = new LegitCompound ("Salt",801,1413);
+		ChemGame.compounds.Add (compound);
+		ChemGame.numLegitCompounds++;
+
+		compound = new LegitCompound ("Methane",-182,-161);
+		ChemGame.compounds.Add (compound);
+		ChemGame.numLegitCompounds++;
+
+		compound = new LegitCompound ("Ammonia",-78,-33);
+		ChemGame.compounds.Add (compound);
+		ChemGame.numLegitCompounds++;
+
+		compound = new LegitCompound ("Acetic Acid",16,118);
+		ChemGame.compounds.Add (compound);
+		ChemGame.numLegitCompounds++;
+
+		compound = new LegitCompound ("Ethanol",-114,78);
+		ChemGame.compounds.Add (compound);
+		ChemGame.numLegitCompounds++;
+
+		compound = new LegitCompound ("Carbon Dioxide",-78,-57);
+		ChemGame.compounds.Add (compound);
+		ChemGame.numLegitCompounds++;
+		// End hard coded stuff
+
+//		String currentLine;
+//		while (!reader.EndOfStream) {
+//			currentLine = reader.ReadLine ();
+//			LegitCompound compound = LegitCompound.parse (currentLine);
+//			ChemGame.compounds.Add (compound);
+//			ChemGame.numLegitCompounds++;
+//		}
+//		reader.Close ();
 	}
 
 	private static void loadNonLegitCompounds() {

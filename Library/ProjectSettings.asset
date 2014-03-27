@@ -14,10 +14,10 @@ PlayerSettings:
   productName: Propel_ChemGame
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  defaultScreenWidth: 1024
-  defaultScreenHeight: 768
-  defaultScreenWidthWeb: 960
-  defaultScreenHeightWeb: 600
+  defaultScreenWidth: 600
+  defaultScreenHeight: 400
+  defaultScreenWidthWeb: 600
+  defaultScreenHeightWeb: 400
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   m_ActiveColorSpace: 0
@@ -34,7 +34,7 @@ PlayerSettings:
   useOSAutorotation: 1
   use32BitDisplayBuffer: 1
   use24BitDepthBuffer: 1
-  defaultIsFullScreen: 1
+  defaultIsFullScreen: 0
   defaultIsNativeResolution: 1
   runInBackground: 0
   captureSingleScreen: 0
@@ -152,7 +152,8 @@ PlayerSettings:
   ps3TrialMode: 0
   flashStrippingLevel: 2
   spritePackerPolicy: 
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    4: 
   metroPackageName: Propel_ChemGame
   metroPackageLogo: 
   metroPackageVersion: 
